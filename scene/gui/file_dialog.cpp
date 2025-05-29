@@ -1714,7 +1714,7 @@ FileDialog::FileDialog() {
 	set_hide_on_ok(false);
 	set_size(Size2(640, 360));
 	set_default_ok_text(ETR("Save")); // Default mode text.
-
+	no_all_files=false;
 	show_hidden_files = default_show_hidden_files;
 	dir_access = DirAccess::create(DirAccess::ACCESS_RESOURCES);
 
@@ -1723,7 +1723,7 @@ FileDialog::FileDialog() {
 
 	HBoxContainer *top_toolbar = memnew(HBoxContainer);
 	main_vbox->add_child(top_toolbar);
-
+	
 	dir_prev = memnew(Button);
 	dir_prev->set_theme_type_variation(SceneStringName(FlatButton));
 	dir_prev->set_accessibility_name(ETR("Previous"));
