@@ -146,7 +146,7 @@ private:
 	FileMode mode = FILE_MODE_SAVE_FILE;
 	FileSortOption file_sort = FileSortOption::NAME;
 	Ref<DirAccess> dir_access;
-
+	bool no_all_files;
 	Vector<String> filters;
 	Vector<String> processed_filters;
 
